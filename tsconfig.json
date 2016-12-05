@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"target": "ES5",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"isolatedModules": false,
+		"jsx": "react"
+	},
+	"compileOnSave":false,
+	"exclude": [
+		"node_modules",
+		"bin"
+  	]
+}

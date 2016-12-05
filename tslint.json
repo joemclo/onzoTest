@@ -1,0 +1,8 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "interface-name": [true,"never-prefix"],
+    "member-access": [false, "check-accessor"],
+    "jsx-no-multiline-js": false
+    }
+}

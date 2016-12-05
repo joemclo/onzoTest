@@ -1,0 +1,45 @@
+{
+  "name": "onzo_test",
+  "version": "0.0.1",
+  "description": "Show air quality in London",
+  "main": "./bin/server/index.js",
+  "scripts": {
+    "postinstall": "gulp build",
+    "start": "node ./bin/server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JoeMclo",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "0.0.33",
+    "@types/express": "^4.0.33",
+    "@types/react": "^0.14.52",
+    "@types/react-dom": "^0.14.19",
+    "body-parser": "^1.15.2",
+    "env2": "^2.1.1",
+    "express": "^4.14.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "tslint-react": "^2.0.0",
+    "typescript": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/gulp": "^3.8.32",
+    "@types/gulp-typescript": "0.0.32",
+    "browserify": "^13.1.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.1.0",
+    "gulp-typescript": "^3.0.0",
+    "path": "^0.12.7",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joemclo/onzoTest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joemclo/onzoTest/issues"
+  },
+  "homepage": "https://github.com/joemclo/onzoTest#readme"
+}
