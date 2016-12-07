@@ -32,7 +32,7 @@ export class DatedNewsList extends React.Component<any,any>{
             const {time} = newsItem;
             const momentedTime = moment(time);
             const today = moment().startOf("day");
-            const yesterday = today.subtract(1, "day");
+            const yesterday = moment().startOf("day").subtract(1, "day");
 
             let addTitle = false;
 

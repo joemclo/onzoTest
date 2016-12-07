@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import NewsStore from "../stores/NewsStore";
+import newsStore from "../stores/NewsStore";
 import {DatedNewsList} from "./DatedNewsList";
 import {SearchInput} from "./SearchInput";
 
@@ -17,15 +17,24 @@ export class News extends React.Component<{},any>{
 
     constructor(context, props) {
         super(context, props);
-
-        // on load of component pull in data either through stores with flux or other
         this.state = {
             filterText: "",
-            news: NewsStore.getState().news,
+            news: undefined,
         };
-        console.log(this.state.news)
 
         this.onFilterTextChange = this.onFilterTextChange.bind(this);
+        this.loadNews();
+    }
+
+    // on load of component pull in data either through stores with flux or other. 
+    // at present call the store directly
+    loadNews() {
+        newsStore.getNews()
+        .then(() => {
+            this.setState({
+                news: newsStore.getState().news,
+            })
+        })
     }
 
     onFilterTextChange(filterText){
@@ -39,11 +48,13 @@ export class News extends React.Component<{},any>{
         const filterText = this.state.filterText;
         let news = this.state.news;
 
-        // filter on search text
-        if(filterText) {
-            news = news.filter((newsItem) => {
-                return findStringInNewsItem(newsItem, filterText);
-            })
+        if(news){
+            // filter on search text
+            if(filterText) {
+                news = news.filter((newsItem) => {
+                    return findStringInNewsItem(newsItem, filterText);
+                })
+            }
         }
 
         return( 
@@ -60,9 +71,12 @@ export class News extends React.Component<{},any>{
                     />
                 </div>
                 <div className="feed">
-                    <DatedNewsList
+                    {news && <DatedNewsList
                         news={news}
-                    />
+                    />}
+                    {!news && <div className="loading">
+                        Loading...
+                    </div>}
                 </div>
             </div>
         );

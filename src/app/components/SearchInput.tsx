@@ -6,7 +6,7 @@ interface SearchInputProps{
 
 }
 
-export class SearchInput extends React.Component<SearchInputProps,any>{
+export class SearchInput extends React.Component<SearchInputProps,{}>{
 
     constructor(props, context){
         super(props, context);
