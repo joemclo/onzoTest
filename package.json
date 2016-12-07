@@ -16,6 +16,7 @@
     "@types/moment": "^2.13.0",
     "@types/react": "^0.14.52",
     "@types/react-dom": "^0.14.19",
+    "@types/whatwg-fetch": "0.0.32",
     "body-parser": "^1.15.2",
     "env2": "^2.1.1",
     "express": "^4.14.0",
@@ -23,7 +24,8 @@
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "tslint-react": "^2.0.0",
-    "typescript": "^2.0.3"
+    "typescript": "^2.0.3",
+    "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
     "@types/gulp": "^3.8.32",
