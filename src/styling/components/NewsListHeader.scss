@@ -1,0 +1,13 @@
+.news-list-header{
+    background: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    color: $textSecondaryColor;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    &:first-child{
+        margin-top:0;
+    }
+}

@@ -7,25 +7,23 @@ export class NewsListItem extends React.Component<any,any>{
         const newsItem = this.props.newsItem;
 
         return(
-            <div style={
-                {
-                    background: "aliceblue",
-                    padding: "10px",
-                }
-            }>
-                <div>
-                    ICON
-                </div>
-                <div>
-                    <h4>{newsItem.title}</h4>
-                    <p>{newsItem.message}</p>
-                    <div>
-                        <span>
-                            {moment(newsItem.time).format("DD.MM.YYYY - hA")}
-                        </span>
-                        <a href={newsItem.url}>
-                            More details >
-                        </a>
+            <div className="news-list-item-hld">
+                <div className="news-list-item">
+                    <div className="nl-icon">
+                    </div>
+                    <div className="nl-details">
+                        <div className="nl-title">{newsItem.title}</div>
+                        <p className="nl-message">
+                            {newsItem.message}
+                        </p>
+                        <div>
+                            <span className="nl-time">
+                                {moment(newsItem.time).format("DD.MM.YYYY - hA")}
+                            </span>
+                            <a className="nl-link" href={newsItem.url}>
+                                More details >
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

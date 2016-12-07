@@ -71,7 +71,7 @@ export class DatedNewsList extends React.Component<any,any>{
         });
 
         return (
-            <div>
+            <div className="dated-news-list">
                 {datedList}
             </div>
         )

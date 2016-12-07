@@ -48,15 +48,18 @@ export class News extends React.Component<{},any>{
 
         return( 
             <div>
-                <h2>news page</h2>
-                <div>
-                    Filter Results
+                <div className="header">
+                    <h1 className="header-title">
+                        News
+                    </h1>
+                </div>
+                <div className="filter">
                     <SearchInput
                         placeholder="filter news items"
                         onChange={this.onFilterTextChange}
                     />
                 </div>
-                <div>
+                <div className="feed">
                     <DatedNewsList
                         news={news}
                     />

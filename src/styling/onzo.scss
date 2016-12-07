@@ -1,0 +1,9 @@
+$textPrimaryColor: #484646;
+$textSecondaryColor: grey;
+
+body{
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+@import "./components/index";

@@ -10,7 +10,6 @@ export class SearchInput extends React.Component<SearchInputProps,any>{
 
     constructor(props, context){
         super(props, context);
-
         this.onInputChange = this.onInputChange.bind(this);
     }
 
@@ -21,8 +20,12 @@ export class SearchInput extends React.Component<SearchInputProps,any>{
 
     render() {
         return (
-            <div>
-                <input onChange={this.onInputChange} type="text" placeholder={this.props.placeholder} />
+            <div className="search-input">
+                <input
+                    onChange={this.onInputChange}
+                    type="search"
+                    placeholder={this.props.placeholder} 
+                />
             </div>
         )
     }
