@@ -7,7 +7,12 @@ export class NewsListItem extends React.Component<any,any>{
         const newsItem = this.props.newsItem;
 
         return(
-            <div>
+            <div style={
+                {
+                    background: "aliceblue",
+                    padding: "10px",
+                }
+            }>
                 <div>
                     ICON
                 </div>
@@ -16,7 +21,7 @@ export class NewsListItem extends React.Component<any,any>{
                     <p>{newsItem.message}</p>
                     <div>
                         <span>
-                            {moment(newsItem.displayTime).format("DD.MM.YYYY - hA")}
+                            {moment(newsItem.time).format("DD.MM.YYYY - hA")}
                         </span>
                         <a href={newsItem.url}>
                             More details >
