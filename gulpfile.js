@@ -52,8 +52,8 @@ gulp.task("nodemon", ["clean", "copyAssests", "bundle"], () => {
                         if (changedFiles) {
                                 changedFiles.forEach((file) => {
                                         const extName = path.extname(file);
-                                        if ((extName === ".ts" || extName === ".tsx") && !~tasks.indexOf("compile-ts")) {
-                                                tasks.push(["compile-ts", "copyAssests"]);
+                                        if ((extName === ".ts" || extName === ".tsx") && !~tasks.indexOf("bundle")) {
+                                                tasks.push("bundle", "copyAssests");
                                         }
                                 });
 
