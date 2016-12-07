@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as ReactDom from "react-dom";
 
-import {SearchResults} from "./components/SearchResults";
+import {News} from "./components/News";
 
-ReactDom.render(<SearchResults/>, document.getElementById("app-container"));
+ReactDom.render(<News/>, document.getElementById("app-container"));
