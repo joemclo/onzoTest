@@ -28,6 +28,7 @@
     "whatwg-fetch": "^2.0.1"
   },
   "devDependencies": {
+    "@types/core-js": "^0.9.35",
     "@types/gulp": "^3.8.32",
     "@types/gulp-typescript": "0.0.32",
     "browserify": "^13.1.1",
