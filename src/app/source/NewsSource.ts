@@ -23,11 +23,6 @@ class NewsSource {
     }
 
     getNews() {
-
-        if(!this.authToken) {
-
-        }
-
         return fetch(API_URL + "feed/P1W/" + moment().format("YYYY-MM-DD"), {
             headers: {
                 "Authentication-Token": this.authToken,

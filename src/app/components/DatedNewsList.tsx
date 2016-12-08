@@ -13,7 +13,7 @@ export class DatedNewsList extends React.Component<any,any>{
 
         const newsItems = this.props.news;
 
-        // sort to ensure in correct date format
+        // sort to ensure news times in correct date order
         newsItems.sort(({time: timeA}, {time: timeB}) => {
             if (timeA < timeB) {
                     return 1;
@@ -24,6 +24,9 @@ export class DatedNewsList extends React.Component<any,any>{
             return 0;
         })
 
+        // create an array of React elements including
+        // each news item and date section titles 
+        // organising news from today, yesterday and each subsequent month
         const datedList = [];
         const todayTitle = "today";
         const yesterdayTitle = "yesterday";

@@ -13,7 +13,7 @@ const findStringInNewsItem = (newsItem, searchString) => {
            messageFormatted.indexOf(searchStringFormatted) > -1;
 }
 
-export class News extends React.Component<{},any>{
+export class News extends React.Component<any,any>{
 
     constructor(context, props) {
         super(context, props);
@@ -47,7 +47,6 @@ export class News extends React.Component<{},any>{
 
         const filterText = this.state.filterText;
         let news = this.state.news;
-
         if(news){
             // filter on search text
             if(filterText) {
